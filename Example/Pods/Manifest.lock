@@ -1,0 +1,27 @@
+PODS:
+  - Alamofire (4.9.1)
+  - Commons (1.0.0):
+    - Alamofire
+    - SnapKit
+  - SnapKit (4.2.0)
+
+DEPENDENCIES:
+  - Commons (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SnapKit
+
+EXTERNAL SOURCES:
+  Commons:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Commons: e5a808de9205189cb86c0e4469bf34cd856193cb
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+
+PODFILE CHECKSUM: 1754379e155109e77ea1bebc788b2eb02dfb7db8
+
+COCOAPODS: 1.10.1
