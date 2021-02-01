@@ -12,7 +12,7 @@ public class Bindable<T> {
     // MARK: - Properties
     var listeners: [Listener] = []
     // MARK: - Constructors
-    init(_ val: T) {
+    public init(_ val: T) {
         self.value = val
     }
     // MARK: - Bind

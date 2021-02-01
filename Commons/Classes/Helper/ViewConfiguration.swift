@@ -12,11 +12,11 @@ public protocol ViewConfiguration: class {
     func setupViewConfiguration()
 }
 
-extension ViewConfiguration {
-    public func setupViewConfiguration() {
+public extension ViewConfiguration {
+    func setupViewConfiguration() {
         buildViewHierarchy()
         setupConstraints()
         configureViews()
     }
-    public func configureViews() { }
+    func configureViews() { }
 }
