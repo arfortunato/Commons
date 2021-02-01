@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CoinsViewDataType {
+public protocol CoinsViewDataType {
     var name: String {get}
     var assetID: String {get}
     var priceUsd: String {get}
@@ -18,7 +18,7 @@ protocol CoinsViewDataType {
     var favorites: Bool {get}
 }
 
-class CoinsViewData {
+public class CoinsViewData {
     // MARK: - Properts
     private let imagem = TelaPrincipalTableViewCell()
     private let model: Coin
@@ -29,39 +29,39 @@ class CoinsViewData {
 }
 
 extension CoinsViewData: CoinsViewDataType {
-    var volume1HrsUsd: String {
+    public var volume1HrsUsd: String {
         let value = model.volume1HrsUsd ?? 0
         let stringVolume1HrsUsd = String(format: "$ %.2f", locale: Locale.current, Double(value))
         return stringVolume1HrsUsd
     }
-    var volume1Day: String {
+    public var volume1Day: String {
         let value = model.volume1DayUsd ?? 0
         let stringVolume1DayUsd = String(format: "$ %.2f", locale: Locale.current, Double(value))
         return stringVolume1DayUsd
     }
-    var volume1MthUsd: String {
+    public var volume1MthUsd: String {
         let value = model.volume1MthUsd ?? 0
         let stringVolume1MthUsd = String(format: "$ %.2f", locale: Locale.current, Double(value))
         return stringVolume1MthUsd
     }
-    var idIcon: String {
+    public var idIcon: String {
         guard let idIcon = model.idIcon else {return ""}
         let idIconFormat = idIcon.replacingOccurrences(of: "-", with: "", options: NSString.CompareOptions.literal, range: nil)
         let urlImage = "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_64/\(idIconFormat).png"
         return urlImage
     }
-    var name: String {
+    public var name: String {
         return model.name ?? ""
     }
-    var assetID: String {
+    public var assetID: String {
         return model.assetID ?? ""
     }
-    var priceUsd: String {
+    public var priceUsd: String {
         let value = model.priceUsd ?? 0
         let stringPriceUsd = String(format: "$ %.2f", locale: Locale.current, Double(value))
         return stringPriceUsd
     }
-    var favorites: Bool {
+    public var favorites: Bool {
         guard let arrayFavorites = UserDefaults.standard.array(forKey: "favorites") as? [String] else {return false}
         if arrayFavorites.contains(assetID) {
             return true
