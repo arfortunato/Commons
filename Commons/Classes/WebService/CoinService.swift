@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 
 public protocol CoinsServiceProtocol {
-    public func getCoins(completion:@escaping (_ coins: Welcome, _ error: String?) -> Void )
+    func getCoins(completion:@escaping (_ coins: Welcome, _ error: String?) -> Void )
 }
 
 public class CoinService: CoinsServiceProtocol {
