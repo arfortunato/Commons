@@ -22,12 +22,12 @@ public class CoinsViewData {
     // MARK: - Properts
     private let model: Coin
     // MARK: - Constructors
-    init(model: Coin) {
+    public init(model: Coin) {
         self.model = model
     }
 }
 
-extension CoinsViewData: CoinsViewDataType {
+public extension CoinsViewData: CoinsViewDataType {
     public var volume1HrsUsd: String {
         let value = model.volume1HrsUsd ?? 0
         let stringVolume1HrsUsd = String(format: "$ %.2f", locale: Locale.current, Double(value))
