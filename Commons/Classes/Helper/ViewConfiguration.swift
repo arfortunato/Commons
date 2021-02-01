@@ -5,7 +5,7 @@
 //  Created by Artur Fortunato on 12/01/21.
 //
 
-protocol ViewConfiguration: class {
+public protocol ViewConfiguration: class {
     func buildViewHierarchy()
     func setupConstraints()
     func configureViews()
@@ -13,10 +13,10 @@ protocol ViewConfiguration: class {
 }
 
 extension ViewConfiguration {
-    func setupViewConfiguration() {
+    public func setupViewConfiguration() {
         buildViewHierarchy()
         setupConstraints()
         configureViews()
     }
-    func configureViews() { }
+    public func configureViews() { }
 }

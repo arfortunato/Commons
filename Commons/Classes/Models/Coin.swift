@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - WelcomeElement
-struct Coin: Codable {
+public struct Coin: Codable {
     let assetID, name: String?
     let typeIsCrypto: Int?
     let dataStart, dataEnd, dataQuoteStart, dataQuoteEnd: String?
@@ -38,4 +38,4 @@ struct Coin: Codable {
         case idIcon = "id_icon"
     }
 }
-typealias Welcome = [Coin]
+public typealias Welcome = [Coin]

@@ -8,12 +8,12 @@
 import UIKit
 import Alamofire
 
-protocol CoinsServiceProtocol {
+public protocol CoinsServiceProtocol {
     func getCoins(completion:@escaping (_ coins: Welcome, _ error: String?) -> Void )
 }
 
-class CoinService: CoinsServiceProtocol {
-    func getCoins(completion:@escaping (_ coins: Welcome, _ error: String?) -> Void ) {
+public class CoinService: CoinsServiceProtocol {
+    public func getCoins(completion:@escaping (_ coins: Welcome, _ error: String?) -> Void ) {
         let url = "https://e3ebf5c1-a974-4ed2-844f-641963d1eca1.mock.pstmn.io"
         Alamofire.request(url, method: .get).responseJSON { (response) in
             if let data = response.data {
