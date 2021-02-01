@@ -20,7 +20,6 @@ public protocol CoinsViewDataType {
 
 public class CoinsViewData {
     // MARK: - Properts
-    private let imagem = TelaPrincipalTableViewCell()
     private let model: Coin
     // MARK: - Constructors
     init(model: Coin) {
